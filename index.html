@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Saravana Chidambaram Fancy Covering | Premium Jewelry</title>
+    <meta name="description" content="Sri Saravana Chidambaram Fancy Covering - Premium imitation jewelry from our own factory in Mayiladuthurai. Bridal sets, necklaces, earrings, bangles and more.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><img src="assets/murugan.png" alt="Sri Murugan"></div>
+                <div class="logo-text">
+                    <span class="brand">Sri Saravana Chidambaram</span>
+                    <span class="tagline">Fancy Covering • Mayiladuthurai</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="products.html">Products</a>
+                <a href="admin.html">Admin</a>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" style="background-image: url('assets/hero.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">✦ Since 1995 — Own Factory ✦</span>
+            <h1>Exquisite Jewelry Crafted With Love & Tradition</h1>
+            <p>Premium imitation jewelry, handcrafted at our own factory in Mayiladuthurai. From bridal sets to everyday elegance — direct factory prices, unmatched quality.</p>
+            <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap; animation: fadeInUp 1s ease 0.6s both;">
+                <a href="products.html" class="btn btn-gold">🛍️ Shop Collection</a>
+                <a href="services.html" class="btn btn-outline">🏭 Our Factory</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="section" style="padding-top:60px;padding-bottom:60px;background:var(--bg-secondary);">
+        <div class="container">
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="feature-card animate-in" style="padding:25px 20px;">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Own Factory</h3>
+                    <p>Direct manufacturing, no middlemen</p>
+                </div>
+                <div class="feature-card animate-in" style="padding:25px 20px;">
+                    <div class="feature-icon">💎</div>
+                    <h3>Premium Quality</h3>
+                    <p>24K gold plating guarantee</p>
+                </div>
+                <div class="feature-card animate-in" style="padding:25px 20px;">
+                    <div class="feature-icon">📱</div>
+                    <h3>WhatsApp Order</h3>
+                    <p>Instant booking via WhatsApp</p>
+                </div>
+                <div class="feature-card animate-in" style="padding:25px 20px;">
+                    <div class="feature-icon">🚚</div>
+                    <h3>All India Delivery</h3>
+                    <p>Safe & secure shipping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section" id="featured">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>✨ Featured Collections</h2>
+                <p>Handpicked designs from our latest collection — crafted at our Mayiladuthurai factory</p>
+                <div class="divider"></div>
+            </div>
+            <div class="products-grid" id="featured-grid"></div>
+            <div style="text-align:center;margin-top:40px;">
+                <a href="products.html" class="btn btn-outline">View All Products →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACTORY PREVIEW -->
+    <section class="section" style="background:var(--bg-secondary);">
+        <div class="container">
+            <div class="factory-section animate-in">
+                <div class="factory-img">
+                    <img src="assets/factory.png" alt="Our Jewelry Factory">
+                </div>
+                <div class="factory-text">
+                    <h2>🏭 Own Factory Manufacturing</h2>
+                    <p>Every piece of jewelry in our collection is crafted at our state-of-the-art factory in Mayiladuthurai. With over 25+ years of expertise, our skilled artisans create stunning imitation jewelry using premium materials and the latest micro-plating technology.</p>
+                    <p>From custom bridal orders to wholesale supply — we deliver unmatched quality at factory-direct prices.</p>
+                    <div class="factory-stats">
+                        <div class="stat"><div class="num">25+</div><div class="label">Years Experience</div></div>
+                        <div class="stat"><div class="num">10K+</div><div class="label">Designs</div></div>
+                        <div class="stat"><div class="num">50K+</div><div class="label">Happy Customers</div></div>
+                    </div>
+                    <div style="margin-top:30px;">
+                        <a href="services.html" class="btn btn-gold">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>💍 Shop by Category</h2>
+                <p>Browse our extensive range of premium imitation jewelry</p>
+                <div class="divider"></div>
+            </div>
+            <div class="features-grid animate-in">
+                <a href="products.html?cat=necklaces" class="feature-card" style="cursor:pointer;">
+                    <div class="feature-icon">📿</div>
+                    <h3>Necklaces</h3>
+                    <p>Temple, chain & designer necklaces</p>
+                </a>
+                <a href="products.html?cat=earrings" class="feature-card" style="cursor:pointer;">
+                    <div class="feature-icon">💎</div>
+                    <h3>Earrings</h3>
+                    <p>Jhumkas, studs & drop earrings</p>
+                </a>
+                <a href="products.html?cat=bangles" class="feature-card" style="cursor:pointer;">
+                    <div class="feature-icon">⭕</div>
+                    <h3>Bangles</h3>
+                    <p>Gold plated bangles & bracelets</p>
+                </a>
+                <a href="products.html?cat=bridal" class="feature-card" style="cursor:pointer;">
+                    <div class="feature-icon">👰</div>
+                    <h3>Bridal Sets</h3>
+                    <p>Complete bridal jewelry collections</p>
+                </a>
+                <a href="products.html?cat=chains" class="feature-card" style="cursor:pointer;">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Chains</h3>
+                    <p>Gold chains with pendants</p>
+                </a>
+                <a href="products.html?cat=rings" class="feature-card" style="cursor:pointer;">
+                    <div class="feature-icon">💍</div>
+                    <h3>Rings</h3>
+                    <p>Designer & traditional rings</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIVINE BLESSINGS -->
+    <section class="section" style="background:var(--bg-secondary);text-align:center;">
+        <div class="container animate-in">
+            <h2 style="font-size:1.8rem;color:var(--gold-light);margin-bottom:1rem;">🙏 Blessed by Sri Karunguzhi Mariamman & Sri Murugan</h2>
+            <p style="color:var(--text-secondary);max-width:700px;margin:auto;font-size:1rem;">Our business thrives under the divine blessings of Sri Karunguzhi Mariamman and Lord Murugan. Every piece we create carries the spirit of devotion, tradition, and excellence.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>Sri Saravana Chidambaram</h4>
+                <p>Premium imitation jewelry since 1995. Own factory manufacturing in Mayiladuthurai, Tamil Nadu.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="products.html">Products</a>
+                    <a href="admin.html">Admin</a>
+                </div>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>📍 Mayiladuthurai, Tamil Nadu</p>
+                <p>📞 98431 32245 / 80984 54395</p>
+                <p>📱 WhatsApp for Orders</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Sri Saravana Chidambaram Fancy Covering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = getProducts();
+            renderProducts('featured-grid', products.slice(0, 3));
+        });
+    </script>
+</body>
+</html>

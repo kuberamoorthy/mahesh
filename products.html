@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Catalogue | Sri Saravana Covering</title>
+    <meta name="description" content="Browse and book premium imitation jewelry via WhatsApp. Necklaces, earrings, bangles, bridal sets and more at factory-direct prices.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><img src="assets/murugan.png" alt="Sri Murugan"></div>
+                <div class="logo-text">
+                    <span class="brand">Sri Saravana Chidambaram</span>
+                    <span class="tagline">Fancy Covering • Mayiladuthurai</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="admin.html">Admin</a>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="section" style="padding-top:120px;padding-bottom:40px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>🛍️ Our Jewelry Collection</h2>
+                <p>Browse and book instantly via WhatsApp — Direct factory prices</p>
+                <div class="divider"></div>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search jewelry..." oninput="searchProducts(this.value)">
+            </div>
+
+            <!-- FILTERS -->
+            <div class="filter-bar" id="filterBar">
+                <button class="filter-btn active" data-cat="all" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn" data-cat="necklaces" onclick="filterProducts('necklaces')">📿 Necklaces</button>
+                <button class="filter-btn" data-cat="earrings" onclick="filterProducts('earrings')">💎 Earrings</button>
+                <button class="filter-btn" data-cat="bangles" onclick="filterProducts('bangles')">⭕ Bangles</button>
+                <button class="filter-btn" data-cat="bridal" onclick="filterProducts('bridal')">👰 Bridal Sets</button>
+                <button class="filter-btn" data-cat="chains" onclick="filterProducts('chains')">🔗 Chains</button>
+                <button class="filter-btn" data-cat="rings" onclick="filterProducts('rings')">💍 Rings</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="products-grid" id="products-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="background:var(--bg-secondary);text-align:center;">
+        <div class="container animate-in">
+            <h2 style="color:var(--gold-light);margin-bottom:1rem;">Can't Find What You Need?</h2>
+            <p style="color:var(--text-secondary);max-width:500px;margin:auto auto 2rem;">Contact us on WhatsApp for custom orders, bulk pricing, and exclusive designs!</p>
+            <a href="https://api.whatsapp.com/send?phone=919843132245&text=Hi!%20I%20want%20to%20enquire%20about%20custom%20jewelry." target="_blank" class="btn btn-whatsapp">📱 Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>Sri Saravana Chidambaram</h4>
+                <p>Premium imitation jewelry since 1995. Own factory manufacturing in Mayiladuthurai, Tamil Nadu.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="products.html">Products</a>
+                    <a href="admin.html">Admin</a>
+                </div>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>📍 Mayiladuthurai, Tamil Nadu</p>
+                <p>📞 98431 32245 / 80984 54395</p>
+                <p>📱 WhatsApp for Orders</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Sri Saravana Chidambaram Fancy Covering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check for category URL param
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat');
+            if (cat) {
+                filterProducts(cat);
+            } else {
+                renderProducts('products-grid', getProducts());
+            }
+        });
+    </script>
+</body>
+</html>

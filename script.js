@@ -5,12 +5,12 @@
 const ADMIN_CREDENTIALS = { username: 'admin', password: 'admin123' };
 
 const DEFAULT_PRODUCTS = [
-    { id: 'p1', name: 'Royal Kundan Bridal Set', category: 'bridal', price: 4500, image: 'assets/necklace.png', description: 'Exquisite kundan bridal necklace set with matching earrings. Intricate meenakari work with ruby and emerald stones.' },
-    { id: 'p2', name: 'Temple Gold Chain', category: 'chains', price: 1800, image: 'assets/chain.png', description: 'Traditional temple design gold chain with ornate pendant featuring ruby stone accents.' },
-    { id: 'p3', name: 'Designer Jhumka Earrings', category: 'earrings', price: 1200, image: 'assets/earrings.png', description: 'Elegant jhumka earrings with pearl and emerald drops. Intricate gold filigree craftsmanship.' },
-    { id: 'p4', name: 'Classic Gold Bangles Set', category: 'bangles', price: 2800, image: 'assets/bangles.png', description: 'Set of 4 gold bangles with intricate floral engravings and stone inlays. Premium micro-plating.' },
-    { id: 'p5', name: 'Diamond Cut Ring', category: 'rings', price: 950, image: 'assets/rings.png', description: 'Elegant diamond-cut gold ring with CZ stone setting. Available in all sizes.' },
-    { id: 'p6', name: 'Lakshmi Long Necklace', category: 'necklaces', price: 5200, image: 'assets/necklace.png', description: 'Goddess Lakshmi motif long haram necklace. Temple jewelry tradition with 24k gold plating.' }
+    { id: 'p1', name: 'Royal Kundan Bridal Set', category: 'bridal', price: 4500, image: 'necklace.png', description: 'Exquisite kundan bridal necklace set with matching earrings. Intricate meenakari work with ruby and emerald stones.' },
+    { id: 'p2', name: 'Temple Gold Chain', category: 'chains', price: 1800, image: 'chain.png', description: 'Traditional temple design gold chain with ornate pendant featuring ruby stone accents.' },
+    { id: 'p3', name: 'Designer Jhumka Earrings', category: 'earrings', price: 1200, image: 'earrings.png', description: 'Elegant jhumka earrings with pearl and emerald drops. Intricate gold filigree craftsmanship.' },
+    { id: 'p4', name: 'Classic Gold Bangles Set', category: 'bangles', price: 2800, image: 'bangles.png', description: 'Set of 4 gold bangles with intricate floral engravings and stone inlays. Premium micro-plating.' },
+    { id: 'p5', name: 'Diamond Cut Ring', category: 'rings', price: 950, image: 'rings.png', description: 'Elegant diamond-cut gold ring with CZ stone setting. Available in all sizes.' },
+    { id: 'p6', name: 'Lakshmi Long Necklace', category: 'necklaces', price: 5200, image: 'necklace.png', description: 'Goddess Lakshmi motif long haram necklace. Temple jewelry tradition with 24k gold plating.' }
 ];
 
 const DEFAULT_PHONE = '919843132245';
@@ -137,7 +137,7 @@ async function addProduct(e) {
     e.preventDefault();
     const form = e.target;
     const fileInput = document.getElementById('pimage');
-    let imageData = 'assets/necklace.png';
+    let imageData = 'necklace.png';
 
     if (fileInput.files && fileInput.files[0]) {
         imageData = await readFileAsBase64(fileInput.files[0]);

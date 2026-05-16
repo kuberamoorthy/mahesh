@@ -287,15 +287,21 @@ function toggleMenu() {
 
 // ─── INIT ───
 document.addEventListener('DOMContentLoaded', () => {
-    // Hamburger
-    const hamburger = document.querySelector('.hamburger');
-    if (hamburger) hamburger.addEventListener('click', toggleMenu);
 
-    // Close mobile menu on link click
+    // Close mobile menu on nav link click
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             document.querySelector('.nav-links')?.classList.remove('open');
         });
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        if (navLinks && hamburger && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            navLinks.classList.remove('open');
+        }
     });
 
     // Scroll animations

@@ -13,10 +13,10 @@
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="index.html" class="logo">
-                <div class="logo-icon"><img src="murugan.png" alt="Sri Murugan"></div>
+                <div class="logo-mark"><img src="murugan.png" alt="Sri Murugan Logo"></div>
                 <div class="logo-text">
-                    <span class="brand">Sri Saravana Chidambaram</span>
-                    <span class="tagline">Fancy Covering • Mayiladuthurai</span>
+                    <span class="brand">Sri <span>Saravana</span> Covering</span>
+                    <span class="tagline">✦ Mayiladuthurai ✦ Est. 1995</span>
                 </div>
             </a>
             <div class="nav-links" id="navLinks">
@@ -25,7 +25,7 @@
                 <a href="products.html">Products</a>
                 <a href="admin.html">Admin</a>
             </div>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -164,6 +164,39 @@
         </div>
     </section>
 
+    <!-- CONTACT INFO CARDS -->
+    <section class="section contact-card-section" id="contact">
+        <div class="container">
+            <div class="section-header animate-in">
+                <h2>📞 Get In Touch</h2>
+                <p>Visit us, call us, or message us on WhatsApp — we're here for you</p>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-cards-grid animate-in">
+                <div class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <h3>Our Store</h3>
+                    <p>Sri Saravana Chidambaram Fancy Covering<br>Mayiladuthurai, Tamil Nadu<br>India — 609 001</p>
+                </div>
+                <div class="contact-card contact-card-gold">
+                    <div class="contact-card-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>
+                        <a href="tel:+919843132245">📲 98431 32245</a><br>
+                        <a href="tel:+918098454395">📲 80984 54395</a><br>
+                        Mon – Sat &nbsp;|&nbsp; 9am – 8pm
+                    </p>
+                </div>
+                <div class="contact-card contact-card-green">
+                    <div class="contact-card-icon">💬</div>
+                    <h3>WhatsApp Order</h3>
+                    <p>Send us a message for instant quotes, custom orders, or bulk enquiries. Fast reply guaranteed!</p>
+                    <a href="https://api.whatsapp.com/send?phone=919843132245&text=Hi!%20I%20want%20to%20enquire%20about%20your%20jewelry." target="_blank" style="display:inline-block;margin-top:14px;padding:10px 20px;background:rgba(255,255,255,0.2);border-radius:8px;font-size:.8rem;letter-spacing:1px;">📱 Chat Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-grid">
@@ -191,6 +224,22 @@
             <p>© 2026 Sri Saravana Chidambaram Fancy Covering. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- FLOATING WHATSAPP CARD -->
+    <div class="wa-float" id="waFloat">
+        <div class="wa-popup-card" id="waPopup">
+            <div class="wa-popup-card-header">
+                <div class="wa-popup-avatar">💬</div>
+                <div>
+                    <div class="wa-popup-title">Sri Saravana Covering</div>
+                    <div class="wa-popup-sub">Mayiladuthurai • Est. 1995</div>
+                </div>
+            </div>
+            <p class="wa-popup-msg">👋 Hi! Looking for beautiful jewelry?<br>Message us on WhatsApp for instant prices, custom orders & exclusive deals!</p>
+            <a href="https://api.whatsapp.com/send?phone=919843132245&text=Hi!%20I%20want%20to%20enquire%20about%20your%20jewelry%20collection." target="_blank" class="wa-popup-btn">📱 Chat on WhatsApp</a>
+        </div>
+        <div class="wa-bubble" onclick="toggleWACard()" title="Chat on WhatsApp">💬</div>
+    </div>
 
     <script src="script.js"></script>
     <script>

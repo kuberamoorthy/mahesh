@@ -280,9 +280,27 @@ function observeAnimations() {
     document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 }
 
+// ─── WHATSAPP FLOAT CARD ───
+function toggleWACard() {
+    const popup = document.getElementById('waPopup');
+    if (popup) popup.classList.toggle('open');
+}
+// Auto-show once after 3 seconds
+setTimeout(() => {
+    const popup = document.getElementById('waPopup');
+    if (popup && !sessionStorage.getItem('waShown')) {
+        popup.classList.add('open');
+        sessionStorage.setItem('waShown', '1');
+        setTimeout(() => popup.classList.remove('open'), 6000);
+    }
+}, 3000);
+
 // ─── HAMBURGER MENU ───
 function toggleMenu() {
-    document.querySelector('.nav-links')?.classList.toggle('open');
+    const nav = document.querySelector('.nav-links');
+    const btn = document.querySelector('.hamburger');
+    if (nav) nav.classList.toggle('open');
+    if (btn) btn.classList.toggle('open');
 }
 
 // ─── INIT ───
@@ -292,6 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             document.querySelector('.nav-links')?.classList.remove('open');
+            document.querySelector('.hamburger')?.classList.remove('open');
         });
     });
 
@@ -301,6 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const hamburger = document.querySelector('.hamburger');
         if (navLinks && hamburger && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
             navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
         }
     });
 

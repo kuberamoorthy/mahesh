@@ -68,7 +68,7 @@ function renderProducts(containerId, products, showAdmin = false) {
     if (!container) return;
 
     if (products.length === 0) {
-        container.innerHTML = '<div style="text-align:center;grid-column:1/-1;padding:60px 20px;"><p style="color:var(--text-secondary);font-size:1.1rem;">No products found</p></div>';
+        container.innerHTML = '<div style="text-align:center;grid-column:1/-1;padding:60px 20px;"><p style="color:var(--text-medium);font-size:1.1rem;">No products found</p></div>';
         return;
     }
 
@@ -102,7 +102,7 @@ function renderAdminProducts(containerId) {
     const products = getProducts();
 
     if (products.length === 0) {
-        container.innerHTML = '<p style="color:var(--text-secondary);text-align:center;padding:30px;">No products yet. Add your first product above!</p>';
+        container.innerHTML = '<p style="color:var(--text-medium);text-align:center;padding:30px;">No products yet. Add your first product above!</p>';
         return;
     }
 

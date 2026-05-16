@@ -136,12 +136,12 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}ul{list-st
 .login-brand-tag{color:var(--gold-light);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;font-weight:500}
 .login-brand-divider{width:50px;height:2px;background:var(--gold);margin:24px auto}
 .login-brand-desc{color:rgba(255,255,255,0.6);font-size:.88rem;font-weight:300;line-height:1.6}
-.login-brand-stats{display:flex;justify-content:center;gap:30px;margin-top:30px}
+.login-brand-stats{display:flex;justify-content:center;gap:30px;margin-top:30px;flex-wrap:wrap}
 .login-brand-stats div{text-align:center}
 .login-brand-stats strong{display:block;font-family:'Cinzel',serif;font-size:1.5rem;color:var(--gold-light)}
 .login-brand-stats span{font-size:.65rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px}
 
-.login-form-side{flex:1;display:flex;align-items:center;justify-content:center;padding:3rem;background:var(--bg-primary)}
+.login-form-side{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--bg-primary)}
 .login-form-side .login-card{width:100%;max-width:400px;padding:0;border:none;box-shadow:none;background:transparent;text-align:left}
 .login-welcome{text-align:center;margin-bottom:35px}
 .login-icon{font-size:3rem;display:block;margin-bottom:12px}
@@ -153,18 +153,17 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}ul{list-st
 .input-icon-wrap input{padding-left:44px !important}
 
 .login-btn{width:100%;justify-content:center;margin-top:12px;padding:16px;font-size:.88rem;letter-spacing:3px}
-
 .login-footer-text{text-align:center;margin-top:28px;font-size:.72rem;color:var(--text-light);letter-spacing:1.5px;text-transform:uppercase}
-
 .login-error{color:var(--danger);font-size:.85rem;margin-bottom:15px;display:none;text-align:center}
 
 @media(max-width:768px){
-.login-container{flex-direction:column}
-.login-brand{min-height:240px;padding:2rem}
+.login-container{flex-direction:column;min-height:auto}
+.login-brand{min-height:220px;padding:1.5rem}
 .login-logo-img{width:60px;height:60px}
-.login-brand-inner h1{font-size:1.2rem}
-.login-brand-stats{gap:20px}
-.login-brand-stats strong{font-size:1.2rem}
+.login-brand-inner h1{font-size:1.1rem;letter-spacing:1.5px}
+.login-brand-stats{gap:16px}
+.login-brand-stats strong{font-size:1.1rem}
+.login-form-side{padding:1.5rem 1rem}
 }
 
 /* ══════════ FORMS ══════════ */
@@ -224,14 +223,73 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}ul{list-st
 .modal-close:hover{color:var(--danger)}
 
 @media(max-width:768px){
-.nav-links{display:none;position:fixed;top:76px;left:0;width:100%;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);flex-direction:column;padding:2rem;gap:1.5rem;border-bottom:1px solid var(--border);box-shadow:var(--shadow-md)}
+/* Navbar */
+.nav-links{display:none;position:fixed;top:76px;left:0;width:100%;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);flex-direction:column;padding:1.5rem 2rem;gap:1.2rem;border-bottom:1px solid var(--border);box-shadow:var(--shadow-md);z-index:999}
 .nav-links.open{display:flex}
 .hamburger{display:flex}
-.factory-section{grid-template-columns:1fr}
-.product-form{grid-template-columns:1fr}
-.hero h1{font-size:1.8rem}
-.section{padding:60px 1rem}
-.products-grid{grid-template-columns:1fr}
-.logo-text .brand{font-size:.9rem;letter-spacing:1.5px}
 .logo-icon{width:38px;height:38px}
+.logo-text .brand{font-size:.85rem;letter-spacing:.5px}
+.logo-text .tagline{font-size:.65rem;letter-spacing:1px}
+
+/* Hero */
+.hero{padding:100px 1.2rem 60px}
+.hero h1{font-size:1.75rem;letter-spacing:1.5px}
+.hero p{font-size:.92rem}
+.hero-badge{font-size:.62rem;padding:8px 20px;letter-spacing:3px}
+
+/* Sections */
+.section{padding:50px 1rem}
+.section-header{margin-bottom:40px}
+.section-header h2{font-size:1.3rem;letter-spacing:1.5px}
+
+/* Buttons */
+.btn{padding:12px 22px;font-size:.78rem;letter-spacing:1.5px}
+
+/* Products */
+.products-grid{grid-template-columns:1fr}
+.product-card .card-img{height:260px}
+
+/* Features */
+.features-grid{grid-template-columns:1fr 1fr;gap:14px}
+.feature-card{padding:22px 14px !important}
+.feature-card h3{font-size:.78rem}
+
+/* Factory */
+.factory-section{grid-template-columns:1fr;gap:30px}
+.factory-img img{height:260px}
+.factory-text h2{font-size:1.3rem}
+.factory-stats{gap:20px;flex-wrap:wrap;justify-content:center}
+.stat .num{font-size:1.8rem}
+
+/* Footer */
+.footer{padding:50px 1.2rem 24px}
+.footer-grid{grid-template-columns:1fr;gap:24px;text-align:center}
+.footer-links{align-items:center}
+
+/* Admin */
+.admin-dashboard{padding:88px 1rem 40px}
+.admin-header{flex-direction:column;align-items:flex-start;gap:12px}
+.admin-header h1{font-size:1.1rem}
+.admin-actions{width:100%}
+.admin-actions .btn{flex:1;justify-content:center;text-align:center}
+.admin-card{padding:20px 14px}
+.product-form{grid-template-columns:1fr}
+.admin-product-list{grid-template-columns:1fr}
+.admin-item{flex-wrap:wrap;gap:12px}
+.admin-item-actions{width:100%;justify-content:flex-end}
+
+/* Modal */
+.modal{padding:28px 18px;margin:1rem}
+.modal-overlay{padding:1rem}
+
+/* Filter */
+.filter-bar{gap:6px}
+.filter-btn{padding:8px 16px;font-size:.75rem}
+}
+
+@media(max-width:480px){
+.features-grid{grid-template-columns:1fr}
+.factory-stats{gap:14px}
+.logo-text .brand{font-size:.78rem}
+.logo-text .tagline{display:none}
 }
